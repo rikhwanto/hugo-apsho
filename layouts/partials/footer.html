@@ -10,11 +10,11 @@
         <form action="#" class="footer-subscribe-form">
           <div class="from-group">
             <div class="input-group">
-              <input type="email" class="form-control" placeholder="Enter Your E-mail">
+              <input type="email" class="form-control" placeholder="Masukkan e-mail Anda untuk berlangganan">
               <div class="subscribe">
                 <button class="btn btn-subscribe" type="submit">
                   <span class="btn-area">
-                    Subscribe
+                    Kirim
                   </span>
                   <svg class="icon-left" xmlns="http://www.w3.org/2000/svg" width="16.317" height="15.323"
                     viewBox="0 0 16.317 15.323">
@@ -55,20 +55,14 @@
           </p>
           <ul class="footer-description-social">
             <li>
-              <a href="{{ .Site.Params.social.facebook }}"><i class="ti-facebook"></i></a>
-            </li>
-            <li>
-              <a href="{{ .Site.Params.social.twitter }}"><i class="ti-twitter-alt"></i></a>
-            </li>
-            <li>
-              <a href="{{ .Site.Params.social.github }}"><i class="ti-github"></i></a>
+              <a href="{{ .Site.Params.social.instagram }}"><i class="ti-instagram"></i></a>
             </li>
           </ul>
         </div>
       </div>
       <div class="col-lg-4 col-md-4">
         <div class="footer-widget">
-          <h4>Sitemap</h4>
+          <h4>Peta Situs</h4>
           <div class="footer-widget-list">
             <ul>
               {{ $sitemap := .Site.Menus.sitemap }}
@@ -81,7 +75,7 @@
       </div>
       <div class="col-lg-4 col-md-4">
         <div class="footer-widget">
-          <h4>Address</h4>
+          <h4>Alamat</h4>
           {{ $address := .Site.Params.address }}
           <div class="footer-widget-list">
             <ul>
