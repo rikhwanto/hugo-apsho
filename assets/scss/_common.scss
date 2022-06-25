@@ -56,6 +56,40 @@ a {
 }
 
 .page {
+  &-error {
+    padding: 130px 0 130px;
+    background-color: $white;
+    text-align: center;
+    margin: 130px 100px 50px;
+    background: #d1ddd3;
+    border-radius: 50px;
+    @include desktop-xl {
+      margin: 130px 50px 50px;
+    }
+    @include desktop {
+      margin: 130px 30px 50px;
+      border-radius: 25px;
+      padding: 80px 0 180px;
+    }
+    @include mobile {
+      margin: 100px 15px 50px;
+      padding: 50px 0 120px;
+    }
+    h1 {
+      @include desktop {
+        font-size: 40px;
+      }
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 40px;
+      line-height: 52px;
+      @include mobile {
+        font-size: 30px;
+        line-height: 42px;
+      }
+    }
+  }
   &-header {
     padding: 130px 0 200px;
     background-color: $white;
