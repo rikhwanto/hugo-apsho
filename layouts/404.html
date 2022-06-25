@@ -1,5 +1,4 @@
 {{ define "main"}}
-{{ with .Site.Data }}
 <section class="page-error">
     <div class="container">
         <div class="row justify-content-center">
@@ -7,10 +6,9 @@
                 <h1>404</h1>
                 <h2>Halaman Tidak Ditemukan</h2>
                 <p>Maaf, halaman yang Anda cari tidak ditemukan</p>
-                <p><a href="{{ .URL }}"><b>Kembali ke Beranda</b></a></p>
+                <p><a href="{{ .Site.BaseURL }}"><b>Kembali ke Beranda</b></a></p>
             </div>
         </div>
     </div>
 </section>
-{{ end }}
 {{ end }}
