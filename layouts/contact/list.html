@@ -21,7 +21,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <form id="contact-form" action="{{ .Site.Params.formspreeURL }}" method="POST" class="contact-form row">
+          <form id="contact-form" data-netlify="true" method="POST" class="contact-form row" name="contact-form">
             <div class="col-lg-6">
               <input
                 type="text"
