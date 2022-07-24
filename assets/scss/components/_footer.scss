@@ -123,10 +123,18 @@
           display: block;
           color: $text-color;
           transition: 0.3s ease;
+          text-decoration: none;
+          @include mobile {
+            font-size: 15px;
+          }
 
           &:hover {
             color: $text-color-dark;
             text-decoration: none;
+          }
+
+          i {
+            padding-right: 10px;
           }
         }
       }
