@@ -1,0 +1,38 @@
+{{ $title := printf "%s" .Site.Title | printf "%s - %s" .Title | printf "%s" }}
+{{ if .IsHome }}
+  {{ $siteTitle := .Site.Title }}
+  {{ with .Site.Params.tagline }}
+    {{ $title = printf "%s" . | printf "%s - %s" $siteTitle | printf "%s" }}
+  {{ else }}
+    {{ $title = .Title }}
+  {{ end }}
+{{ end }}
+{{ $image := .Site.Params.defaultFeatureImage | absURL }}
+{{ with .Params.featureImage }}
+  {{ $image = . | absURL }}
+{{ end }}
+{{ $description := .Site.Params.defaultDescription }}
+{{ with .Params.description }}
+  {{ $description = . }}
+{{ end }}
+{{ $url := .Permalink }}
+{{ $parseDomain := split .Site.BaseURL "//" }}{{ $domain := index $parseDomain 1 }}
+  <title>{{ $title }}</title>
+  <meta name="description" content="{{ $description }}">
+
+  {{ "<!-- Facebook Meta Tags -->" | safeHTML }}
+  <meta property="og:url" content="{{ $url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:image" content="{{ $image }}">
+
+  {{ "<!-- Twitter Meta Tags -->" | safeHTML }}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="{{ $domain }}">
+  <meta property="twitter:url" content="{{ $url }}">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $description }}">
+  <meta name="twitter:image" content="{{ $image }}">
+
+  {{ "<!-- Meta Tags Generated via https://www.opengraph.xyz -->" | safeHTML }}
